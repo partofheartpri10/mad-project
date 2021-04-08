@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:mad_project/modals/user.dart';
 class UserDatabase{
 
@@ -11,7 +12,8 @@ class UserDatabase{
     return await collectionReference.doc(uid).set({
         "menstrualLength":user.menstrualLength,
         "periodLength":user.periodLength,
-        "lastMenstruation":user.lastMenstruation.map((e) => e.toIso8601String()).toList()
+        "lastMenstruation":user.lastMenstruation.map((e) => e.toIso8601String()).toList(),
+        "name":user.name
       }
     );
   }
@@ -30,11 +32,12 @@ class UserDatabase{
       return AppUser(
           menstrualLength: snapshot.data()["menstrualLength"],
           periodLength: snapshot.data()["periodLength"],
-          lastMenstruation:dynamicToDateTime( snapshot.data()["lastMenstruation"])
+          lastMenstruation:dynamicToDateTime( snapshot.data()["lastMenstruation"]),
+          name: snapshot.data()["name"]
       );
       else {
         if(snapshot.exists == false){
-          AppUser user = AppUser(menstrualLength: 0,periodLength: 0,lastMenstruation: []);
+          AppUser user = AppUser(menstrualLength: 0,periodLength: 0,lastMenstruation: [],name: "girl");
           updateUserData(user);
           return user;
         }else{

@@ -50,6 +50,7 @@ class _RegisterState extends State<Register> {
                       Text(
                         'SUV',
                         style: TextStyle(
+                          fontFamily:'dsc',
                           fontSize: 40,
                           //color: Colors.white,
 
@@ -62,6 +63,7 @@ class _RegisterState extends State<Register> {
                       Text(
                         'DHA',
                         style: TextStyle(
+                          fontFamily:'dsc',
                           fontSize: 40,
                           //color: Colors.white,
 
@@ -149,7 +151,7 @@ class _RegisterState extends State<Register> {
                     ),
                     onPressed: () {
                       Future((){
-                        // Navigator.push(context,MaterialPageRoute(builder: (context)=>OtpCodeVerificationScreen(phoneNumber:"+91"+phoneController.text)));
+                        Navigator.push(context,MaterialPageRoute(builder: (context)=>OtpCodeVerificationScreen(phoneNumber:"+91"+phoneController.text)));
                       });
                     },
                   )

@@ -2,13 +2,14 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:mad_project/database/user_database.dart';
 import 'package:mad_project/shared/loading.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class OtpCodeVerificationScreen extends StatefulWidget {
 
   String phoneNumber;
-  // OtpCodeVerificationScreen({this.phoneNumber});
+  OtpCodeVerificationScreen({this.phoneNumber});
 
   @override
   _OtpCodeVerificationScreenState createState() =>
@@ -102,7 +103,7 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return isLoading==true?Scaffold(
+    return isLoading==false?Scaffold(
       body: Stack(
         children: [
           Container(
@@ -127,7 +128,7 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 40,
-                          fontFamily:'dsc'
+                          fontFamily:'dsc',
                           //color: Colors.white,
 
                         ),

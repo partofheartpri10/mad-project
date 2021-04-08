@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:mad_project/screens/home.dart';
 import 'package:mad_project/screens/shop_page.dart';
+import 'package:mad_project/shop_page_wrapper.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import 'chat_page.dart';
 import 'consult_page.dart';
-
 
 
 class MainPage extends StatefulWidget {
@@ -14,11 +14,11 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _currentIndex = 0;
 
+  int _currentIndex = 0;
   List<Widget>pages = [
     Home(),
-    ShopPage(),
+    ShopPageWrapper(),
     ConsultPage(),
     ChatPage()
   ];

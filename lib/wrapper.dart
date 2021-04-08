@@ -40,6 +40,8 @@ class _HomeWrapperState extends State<HomeWrapper> {
   @override
   Widget build(BuildContext context) {
     AppUser user = Provider.of<AppUser>(context);
+    if(user!=null)
+    print(user.name);
     return (user==null)?Loading():MainPage();
   }
 }
