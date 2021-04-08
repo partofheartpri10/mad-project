@@ -125,7 +125,9 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                       Text(
                         'SUV',
                         style: TextStyle(
+                          fontWeight: FontWeight.bold,
                           fontSize: 40,
+                          fontFamily:'dsc'
                           //color: Colors.white,
 
                         ),
@@ -137,7 +139,9 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                       Text(
                         'DHA',
                         style: TextStyle(
+                            fontWeight: FontWeight.bold,
                           fontSize: 40,
+                            fontFamily:'dsc'
                           //color: Colors.white,
 
                         ),
@@ -146,13 +150,15 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                   ),
                   SizedBox(height: 50,),
                   Card(
+                    margin: EdgeInsets.all(15.0),
+                    elevation: 10.0,
                     child: Column(
 
                       children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 12.0, bottom: 40.0),
-                    child: Align(
-                      alignment: Alignment.topLeft,
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 12.0, bottom: 40.0, left: 20.0,),
                       child: Text(
                         'OTP Verification',
                         style:
@@ -161,24 +167,27 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 30.0, vertical: 8),
-                    child: RichText(
-                      maxLines: 2,
-                      text: TextSpan(
-                          text: "Enter the OTP you received to ",
-                          children: [
-                            TextSpan(
-                                text: widget.phoneNumber,
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 15)),
-                          ],
-                          style:
-                              TextStyle(color: Colors.black54, fontSize: 15)),
-                      textAlign: TextAlign.center,
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 20.0, vertical: 8),
+                      child: RichText(
+                        maxLines: 2,
+                        text: TextSpan(
+                            text: "Enter the OTP you received to ",
+                            children: [
+                              TextSpan(
+                                  text: widget.phoneNumber,
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15)),
+                            ],
+                            style:
+                                TextStyle(color: Colors.black54, fontSize: 15)),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                   Padding(
@@ -230,21 +239,27 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                     ),
                   ),
 
-                  RichText(
-                    maxLines: 2,
-                    text: TextSpan(
-                        text: "OTP Valid For  ",
-                        children: [
-                          TextSpan(
-                              text: "${count.toString()} seconds",
-                              style: TextStyle(
-                                  color: Colors.blue,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 15)),
-                        ],
-                        style:
-                        TextStyle(color: Colors.black54, fontSize: 15)),
-                    textAlign: TextAlign.center,
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 20.0, bottom: 10.0, left: 20,),
+                      child: RichText(
+                        maxLines: 2,
+                        text: TextSpan(
+                            text: "OTP Valid For  ",
+                            children: [
+                              TextSpan(
+                                  text: "${count.toString()} seconds",
+                                  style: TextStyle(
+                                      color: Colors.blue,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 15)),
+                            ],
+                            style:
+                            TextStyle(color: Colors.black54, fontSize: 15)),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
                   ),
                       ],
                     ),
