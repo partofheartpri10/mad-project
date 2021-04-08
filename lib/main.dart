@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:mad_project/screens/authentication_screens/otp_verification_page.dart';
 import 'package:mad_project/screens/authentication_screens/reg.dart';
 import 'package:mad_project/screens/chat_page.dart';
 import 'package:mad_project/services/auth.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blueGrey,
         ),
-        home: Wrapper(),
+        home: OtpCodeVerificationScreen(),
       ),
     );
   }

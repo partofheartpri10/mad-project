@@ -8,7 +8,7 @@ import 'package:pin_code_fields/pin_code_fields.dart';
 class OtpCodeVerificationScreen extends StatefulWidget {
 
   String phoneNumber;
-  OtpCodeVerificationScreen({this.phoneNumber});
+  // OtpCodeVerificationScreen({this.phoneNumber});
 
   @override
   _OtpCodeVerificationScreenState createState() =>
@@ -102,14 +102,14 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return isLoading==false?Scaffold(
+    return isLoading==true?Scaffold(
       body: Stack(
         children: [
           Container(
             padding: EdgeInsets.all(25.0),
             decoration: BoxDecoration(
                 image: DecorationImage(
-              image: AssetImage('assets/registerBackground.jpg'),
+              image: AssetImage('assets/madOtp.png'),
               fit: BoxFit.cover,
             )),
           ),
@@ -119,17 +119,46 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CircleAvatar(
-                    backgroundImage: AssetImage('assets/otp.jpg'),
-                    radius: 130,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'SUV',
+                        style: TextStyle(
+                          fontSize: 40,
+                          //color: Colors.white,
+
+                        ),
+                      ),
+                      CircleAvatar(
+                        backgroundImage: AssetImage('assets/feminine.png'),
+                        backgroundColor: Color.fromRGBO(120, 120, 120, 0),
+                      ),
+                      Text(
+                        'DHA',
+                        style: TextStyle(
+                          fontSize: 40,
+                          //color: Colors.white,
+
+                        ),
+                      ),
+                    ],
                   ),
+                  SizedBox(height: 50,),
+                  Card(
+                    child: Column(
+
+                      children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8.0),
-                    child: Text(
-                      'Phone Number Verification',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
-                      textAlign: TextAlign.center,
+                    padding: const EdgeInsets.only(top: 12.0, bottom: 40.0),
+                    child: Align(
+                      alignment: Alignment.topLeft,
+                      child: Text(
+                        'OTP Verification',
+                        style:
+                            TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                   Padding(
@@ -138,7 +167,7 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                     child: RichText(
                       maxLines: 2,
                       text: TextSpan(
-                          text: "Enter the code sent to ",
+                          text: "Enter the OTP you received to ",
                           children: [
                             TextSpan(
                                 text: widget.phoneNumber,
@@ -217,9 +246,14 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                         TextStyle(color: Colors.black54, fontSize: 15)),
                     textAlign: TextAlign.center,
                   ),
+                      ],
+                    ),
+                  ),
+
                   SizedBox(
                     height: 20,
-                  ),
+                  )
+    ,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -240,6 +274,7 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                           ))
                     ],
                   ),
+
                   SizedBox(height: 20)
                 ],
               ),

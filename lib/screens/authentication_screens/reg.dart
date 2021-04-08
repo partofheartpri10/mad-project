@@ -48,23 +48,19 @@ class _RegisterState extends State<Register> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'SU',
+                        'SUV',
                         style: TextStyle(
                           fontSize: 40,
                           //color: Colors.white,
 
                         ),
                       ),
-                      Text(
-                        'VID',
-                        style: TextStyle(
-                          fontSize: 40,
-                          color: Colors.white,
-
-                        ),
+                      CircleAvatar(
+                        backgroundImage: AssetImage('assets/feminine.png'),
+                        backgroundColor: Color.fromRGBO(120, 120, 120, 0),
                       ),
                       Text(
-                        'HA',
+                        'DHA',
                         style: TextStyle(
                           fontSize: 40,
                           //color: Colors.white,
@@ -153,7 +149,7 @@ class _RegisterState extends State<Register> {
                     ),
                     onPressed: () {
                       Future((){
-                        Navigator.push(context,MaterialPageRoute(builder: (context)=>OtpCodeVerificationScreen(phoneNumber:"+91"+phoneController.text)));
+                        // Navigator.push(context,MaterialPageRoute(builder: (context)=>OtpCodeVerificationScreen(phoneNumber:"+91"+phoneController.text)));
                       });
                     },
                   )
