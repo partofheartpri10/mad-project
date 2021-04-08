@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mad_project/screens/home.dart';
-import 'package:mad_project/screens/shop_page.dart';
 import 'package:mad_project/shop_page_wrapper.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -36,7 +35,7 @@ class _MainPageState extends State<MainPage> {
           SalomonBottomBarItem(
             icon: Icon(Icons.home),
             title: Text("Home"),
-            selectedColor: Colors.purple,
+            selectedColor: Colors.pink,
           ),
 
           SalomonBottomBarItem(
@@ -47,16 +46,16 @@ class _MainPageState extends State<MainPage> {
 
           /// Search
           SalomonBottomBarItem(
-            icon: Icon(Icons.live_help_sharp),
-            title: Text("Any help"),
-            selectedColor: Colors.orange,
+            icon: Icon(Icons.local_hospital),
+            title: Text("any help"),
+            selectedColor: Colors.pink,
           ),
 
           /// Profile
           SalomonBottomBarItem(
-            icon: Icon(Icons.chat),
-            title: Text("chats"),
-            selectedColor: Colors.teal,
+            icon: Icon(Icons.help),
+            title: Text("FAQ"),
+            selectedColor: Colors.pink,
           ),
         ],
       ),

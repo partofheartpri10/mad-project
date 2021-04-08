@@ -4,7 +4,8 @@ class Shopkeeper{
   bool available;
   String name;
   String shopName;
+  String uid;
 
-  Shopkeeper({this.name,this.shopName,this.deliveryCharges, this.available});
+  Shopkeeper({this.uid,this.name,this.shopName,this.deliveryCharges, this.available});
 
 }

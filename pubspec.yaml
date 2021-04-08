@@ -37,6 +37,7 @@ dependencies:
   firebase_database:
   fluttertoast: ^8.0.3
   firebase_core: ^1.0.3
+  simple_vertical_calendar: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -60,6 +61,10 @@ flutter:
     - family: dsc
       fonts:
         - asset: assets/DancingScript-VariableFont_wght.ttf
+    - family: playfair
+      fonts:
+        - asset: assets/PlayfairDisplay-MediumItalic.ttf
+
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

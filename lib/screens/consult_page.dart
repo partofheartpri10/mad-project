@@ -9,8 +9,15 @@ class ConsultPage extends StatefulWidget {
 class _ConsultPageState extends State<ConsultPage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Consult"),
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.pink[200],
+        onPressed: (){},
+        child: Icon(Icons.phone),
+      ),
+      body: Center(
+        child: Text("Consult"),
+      ),
     );
   }
 }

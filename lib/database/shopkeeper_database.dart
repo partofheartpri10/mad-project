@@ -23,6 +23,7 @@ class ShopkeeperDatabase{
           shopName: e.data()["shopName"],
           available: e.data()["available"]=="true",
           deliveryCharges: e.data()["deliveryCharge"],
+          uid: e.data()["uid"],
           name: e.data()["name"]);
     }).toList();
   }
@@ -41,7 +42,8 @@ class ShopkeeperDatabase{
             shopName: snapshot.data()["shopName"],
             available: snapshot.data()["available"],
             deliveryCharges: snapshot.data()["deliveryCharge"],
-            name: snapshot.data()["name"]
+            name: snapshot.data()["name"],
+            uid: snapshot.data()["uid"]
         );
       else {
         if (snapshot.exists == false) {

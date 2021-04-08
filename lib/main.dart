@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner:  false,
         theme: ThemeData(
           primarySwatch: Colors.blueGrey,
+         // fontFamily: 'ply',
         ),
         home: Wrapper(),
       ),

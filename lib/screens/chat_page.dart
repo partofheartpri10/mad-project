@@ -46,7 +46,14 @@ class _ChatPageState extends State<ChatPage> {
                                     fontWeight: FontWeight.bold,
                                 ),
                                   ),
-                                SizedBox(width: 10),
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Container(child: SizedBox(width: 10)),
+                                    ),
+                                  ],
+                                ),
                                 Flexible(
                                   child: Text(
                                     item[index].ques,
@@ -74,8 +81,14 @@ class _ChatPageState extends State<ChatPage> {
                                 ),
                                 SizedBox(width: 10),
                                 Flexible(
-                                  child: Text(
-                                    item[index].ans
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(12.0),
+                                    child: Text(
+                                      item[index].ans,
+                                      style: TextStyle(
+                                          fontSize: 15,
+                                      ),
+                                    ),
                                   ),
                                 )
                               ],
@@ -84,41 +97,16 @@ class _ChatPageState extends State<ChatPage> {
                         ),
                       ),
                     );
-                  });
+
+                  }
+
+                  );
             }
          else{
               return Loading();
             }
               },
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child:TextFormField(
-                    controller: ques,
-                    decoration: InputDecoration(
-                      hintText: "Type your queries",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12.0)
-                      ),
-                      suffixIcon: IconButton(icon: Icon(Icons.send),
-                        onPressed: (){
-                          print(ques.text);
-                        if(ques.text.length > 0){
-                           reference.push().set({
-                            "ques": ques.text,
-                             "ans":""
-                          });
-                          setState(() {
-                            ques.clear();
-                          });
-                        }
-                      },)
-                    ),
-                  )
-              ),
-            )
           ],
         ),
       ),
